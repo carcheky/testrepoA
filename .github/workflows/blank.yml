@@ -31,6 +31,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        git add .
+        git commit -m "updated"
         git remote rename origin upstream
         git remote add origin https://github.com/carcheky/testrepoB.git
         git push -f origin master
