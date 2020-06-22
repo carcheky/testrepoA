@@ -33,8 +33,9 @@ jobs:
         echo test, and deploy your project.
         git config --global user.email "carcheky@gmail.com"
         git config --global user.name "carcheky"
-        git add .
-        git commit -m "updated"
+        version=$(git ls-remote --tags --sort="v:refname" git://github.com/carcheky/testrepoA.git | tail -n1 | sed 's/.*\///; s/\^{}//')
         git remote rename origin upstream
         git remote add origin https://github.com/carcheky/testrepoB.git
+        git tag $version
         git push -f origin master
+        git push origin $version
