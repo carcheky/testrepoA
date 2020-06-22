@@ -31,6 +31,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        git config --global user.email "carcheky@gmail.com"
+        git config --global user.name "carcheky"
         git add .
         git commit -m "updated"
         git remote rename origin upstream
