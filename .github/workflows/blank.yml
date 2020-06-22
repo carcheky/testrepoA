@@ -33,4 +33,4 @@ jobs:
         git checkout master
         git push -f -u drupalrepo master
         git tag $version
-        git push -f -u drupalrepo --tags
+        git push -f drupalrepo $version
