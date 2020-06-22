@@ -31,6 +31,6 @@ jobs:
         git config --global user.email "carcheky@gmail.com"
         git config --global user.name "carcheky"
         git checkout master
-        git push -u drupalrepo master
+        git push -f -u drupalrepo master
         git tag $version
-        git push drupalrepo --tags
+        git push -f -u drupalrepo --tags
